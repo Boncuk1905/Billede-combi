@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <title>Upload Halsbåndsbillede</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Produkt Collage Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Upload dit eget halsbåndsbillede</h1>
-    
-    <input type="file" id="imageUpload" accept="image/*">
-    
-    <div id="previewContainer">
-        <img id="preview" src="" alt="Forhåndsvisning vises her">
-    </div>
+  <h1>Upload produktbilleder og lav en collage</h1>
+  <input type="file" id="imageUpload" accept="image/*" multiple>
+  <br><br>
+  <button id="generateButton">Generér billede</button>
+  <button id="downloadButton">Download</button>
 
-    <script src="script.js"></script>
+  <div id="canvasContainer">
+    <canvas id="collageCanvas" width="1000" height="400"></canvas>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
