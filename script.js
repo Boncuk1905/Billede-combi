@@ -1,14 +1,21 @@
-document.getElementById('imageUpload').addEventListener('change', function (event) {
-    const file = event.target.files[0];
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Produkt Collage Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Upload produktbilleder og lav en collage</h1>
+  <input type="file" id="imageUpload" accept="image/*" multiple>
+  <br><br>
+  <button id="generateButton">Generér billede</button>
+  <button id="downloadButton">Download</button>
 
-    if (file && file.type.startsWith('image/')) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            document.getElementById('preview').src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    } else {
-        alert("Vælg venligst et gyldigt billede.");
-        document.getElementById('preview').src = "";
-    }
-});
+  <div id="canvasContainer">
+    <canvas id="collageCanvas" width="1000" height="400"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
