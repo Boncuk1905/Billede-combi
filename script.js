@@ -16,6 +16,8 @@ generateBtn.addEventListener('click', () => {
     return;
   }
 
+  document.getElementById('loading').style.display = 'block'; // vis loading
+
   const images = [];
   let loadedCount = 0;
 
@@ -27,6 +29,7 @@ generateBtn.addEventListener('click', () => {
         images[index] = img;
         loadedCount++;
         if (loadedCount === imageFiles.length) {
+          document.getElementById('loading').style.display = 'none'; // skjul når klar
           drawCollage(images);
         }
       };
