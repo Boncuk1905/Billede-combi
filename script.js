@@ -9,5 +9,6 @@ document.getElementById('imageUpload').addEventListener('change', function (even
         reader.readAsDataURL(file);
     } else {
         alert("Vælg venligst et gyldigt billede.");
+        document.getElementById('preview').src = "";
     }
 });
