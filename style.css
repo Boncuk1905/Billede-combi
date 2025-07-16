@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#previewContainer {
+    margin-top: 20px;
+}
+
+#preview {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
